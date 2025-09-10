@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { HeroSection } from '@/components/HeroSection';
 import { QRScanner } from '@/components/QRScanner';
 import { ProvenanceJourney } from '@/components/ProvenanceJourney';
 import { mockProvenanceData } from '@/data/mockData';
 import { ProvenanceBundle } from '@/types/traceability';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Users } from 'lucide-react';
 
 const Index = () => {
   const [currentView, setCurrentView] = useState<'hero' | 'scanner' | 'provenance'>('hero');
   const [provenanceData, setProvenanceData] = useState<ProvenanceBundle | null>(null);
+  const navigate = useNavigate();
 
   const handleGetStarted = () => {
     setCurrentView('scanner');
@@ -29,10 +31,27 @@ const Index = () => {
     }
   };
 
+  const handleSupplyChainLogin = () => {
+    navigate('/dashboard');
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {currentView === 'hero' && (
-        <HeroSection onGetStarted={handleGetStarted} />
+        <>
+          {/* Supply Chain Access Button */}
+          <div className="absolute top-4 right-4 z-20">
+            <Button 
+              onClick={handleSupplyChainLogin}
+              variant="outline"
+              className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm"
+            >
+              <Users className="mr-2 h-4 w-4" />
+              Supply Chain Login
+            </Button>
+          </div>
+          <HeroSection onGetStarted={handleGetStarted} />
+        </>
       )}
       
       {currentView === 'scanner' && (

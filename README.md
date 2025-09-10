@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+# AyurChain - Blockchain Botanical Traceability System
 
-## Project info
+A comprehensive blockchain-based traceability system for Ayurvedic herbs covering the entire supply chain from farmer/wild collector to final product packaging.
 
-**URL**: https://lovable.dev/projects/07282e2b-696a-4d7b-a17a-d9af9f526d45
+## Features
 
-## How can I edit this code?
+### Consumer Portal
+- **QR Code Scanner**: Verify product authenticity instantly
+- **Complete Provenance Journey**: View full supply chain transparency
+- **Quality Certificates**: Access lab test results and compliance data
+- **Sustainability Metrics**: Track environmental and social impact
 
-There are several ways of editing your application.
+### Supply Chain Interfaces
+- **Farmer Collection Portal**: GPS-tagged collection events with photo documentation
+- **Processing Unit Dashboard**: Real-time blockchain status updates
+- **Laboratory Integration**: Quality test result submissions
+- **Manufacturer Portal**: Final packaging and batch management
 
-**Use Lovable**
+### Blockchain Features
+- **Geo-fencing**: GPS location verification within approved zones
+- **Quality Validation**: Automated compliance checks (moisture, pesticides, DNA barcoding)
+- **Immutable Records**: Tamper-proof supply chain documentation
+- **Smart Contracts**: Automated rule enforcement and validations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/07282e2b-696a-4d7b-a17a-d9af9f526d45) and start prompting.
+## Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Blockchain**: Hyperledger Fabric / Corda (simulated)
+- **Image Processing**: Hugging Face Transformers.js
+- **Authentication**: Role-based access control
+- **Mobile Support**: Responsive design with offline capabilities
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Consumer Access
+Visit the main page and use the QR scanner or enter batch ID: `ASH-2024-001-KR`
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Supply Chain Access
+Click "Supply Chain Login" and use demo credentials:
+- **Farmer**: farmer@example.com (any password)
+- **Processor**: processor@example.com (any password)
 
-Follow these steps:
+## Demo Flow
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Farmer Collection**: Submit collection event with GPS coordinates and photos
+2. **Processing Updates**: Record drying, grinding, and packaging steps
+3. **Quality Testing**: Upload lab certificates and test results
+4. **Consumer Verification**: Scan QR code to view complete journey
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Compliance Standards
 
-# Step 3: Install the necessary dependencies.
-npm i
+- AYUSH Ministry guidelines compliance
+- National Medicinal Plants Board regulations
+- FHIR-like resource standardization
+- GMP and organic certification tracking
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/07282e2b-696a-4d7b-a17a-d9af9f526d45) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+*This project demonstrates a complete blockchain traceability solution for ensuring authenticity, sustainability, and regulatory compliance in the Ayurvedic herb supply chain.*
